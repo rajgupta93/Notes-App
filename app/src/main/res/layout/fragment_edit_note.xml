@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.CreatNoteFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/sixteen_dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/sixteen_dp"
+            android:fontFamily="@font/product_regular"
+            android:background="@drawable/edit_text_background_grey"
+            android:textColorHint="@color/white"
+            android:id="@+id/title"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subtitle"
+            android:inputType="text"
+            android:maxLines="1"
+            android:lines="2"
+            android:padding="@dimen/sixteen_dp"
+            android:fontFamily="@font/product_regular"
+            android:background="@drawable/edit_text_background_grey"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            android:textColorHint="@color/white"
+            android:id="@+id/subtitle"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            >
+            <ImageView
+                android:layout_width="@dimen/twentyfive_sp"
+                android:layout_height="@dimen/twentyfive_sp"
+                android:background="@drawable/red_dot"
+                android:layout_marginLeft="@dimen/sixteen_dp"
+                android:id="@+id/redBtn"
+                android:src="@drawable/ic_baseline_check_24"
+                />
+            <ImageView
+                android:layout_width="@dimen/twentyfive_sp"
+                android:layout_height="@dimen/twentyfive_sp"
+                android:background="@drawable/yelllow_dot"
+                android:layout_marginLeft="@dimen/sixteen_dp"
+                android:id="@+id/yellowBtn"
+                />
+            <ImageView
+                android:layout_width="@dimen/twentyfive_sp"
+                android:layout_height="@dimen/twentyfive_sp"
+                android:background="@drawable/green_dot"
+                android:layout_marginLeft="@dimen/sixteen_dp"
+                android:id="@+id/greenBtn"
+
+                />
+
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:hint="@string/notes"
+            android:inputType="text"
+            android:maxLines="10"
+            android:lines="2"
+            android:padding="@dimen/sixteen_dp"
+            android:fontFamily="@font/product_regular"
+            android:background="@drawable/edit_text_background_grey"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            android:gravity="start"
+            android:textColorHint="@color/white"
+            android:id="@+id/note"
+            />
+
+    </LinearLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/delete_dialog"
+        android:layout_gravity="bottom"
+        android:id="@+id/dialog"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/red"
+        app:srcCompat="@drawable/ic_baseline_check_24"
+        app:tint="@color/white"
+        android:layout_margin="@dimen/sixteen_dp"
+        android:id="@+id/updatenote"/>
+
+
+
+</FrameLayout>
